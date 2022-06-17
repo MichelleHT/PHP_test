@@ -1,0 +1,16 @@
+<?php
+    $nameAtualizar = $_REQUEST['nameAtualizar'];
+    if (empty($nameAtualizar)) {
+        echo "Informe o registro para continuar.</br>";
+    } else {
+
+        //Connection
+        $con = mysqli_connect('localhost','michelle','michelle','teste');
+
+        //Query
+        UPDATE `cadastro` SET `name`='[value-1]' WHERE 1
+        $log = $con->query("UPDATE cadastro SET name = '$nameAtualizar' WHERE name");
+
+        header("Location: index.php");
+    } 
+?>
